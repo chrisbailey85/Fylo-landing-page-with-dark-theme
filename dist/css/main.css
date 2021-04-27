@@ -48,6 +48,7 @@ body {
   cursor: pointer;
   position: relative;
   z-index: 100;
+  transition: all 0.3s ease-in-out;
 }
 
 .header {
@@ -373,10 +374,6 @@ body {
   .banner {
     padding-top: 5rem;
   }
-  .banner::after {
-    background-size: cover;
-    background-position: center;
-  }
   .banner--heading {
     font-size: 1.4rem;
   }
@@ -402,9 +399,6 @@ body {
     margin: 1rem auto;
   }
 
-  .banner::after {
-    width: 425px;
-  }
   .banner--heading {
     font-size: 1.4rem;
   }
@@ -416,6 +410,10 @@ body {
 @media (min-width: 768px) {
   .header {
     padding: 2rem 4rem;
+  }
+
+  .nav__link {
+    font-size: 1rem;
   }
 
   .s--pad {
@@ -440,7 +438,6 @@ body {
   .banner::after {
     background-image: url("../images/bg-curvy-desktop.svg");
     height: 200px;
-    width: 768px;
   }
 
   .about__cards {
@@ -500,8 +497,7 @@ body {
 }
 @media (min-width: 1024px) {
   .banner::after {
-    width: 1024px;
-    height: 250px;
+    height: 350px;
     background-size: cover;
   }
 
@@ -550,11 +546,9 @@ body {
   }
 
   .banner::after {
-    width: 1440px;
     height: 449px;
     bottom: 0;
     left: 0;
-    top: unset;
   }
 
   .about {
@@ -568,6 +562,21 @@ body {
 
   .testimonies--paragraph {
     font-size: 0.7rem;
+  }
+}
+@media (pointer: fine) {
+  .btn:hover {
+    background: linear-gradient(to right, #65e2d9 100%, #339ecc 0%);
+  }
+
+  .nav__link:hover,
+.footer__link:hover {
+    text-decoration: underline;
+  }
+
+  .social--icon:hover {
+    color: #65e2d9;
+    border-color: #65e2d9;
   }
 }
 
